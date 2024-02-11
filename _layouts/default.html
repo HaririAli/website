@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title>{{ page.title }} | {{ site.name }}</title>
+  </head>
+
+  <body>
+    <table id="table">
+      <tr>
+        <td id="td-header">{% include header.html %}</td>
+      </tr>
+      <tr>
+        <td id="td-content">{{ content }}</td>
+      </tr>
+      <tr>
+        <td id="td-footer"><hr>{% include footer.html %}</td>
+      </tr>
+    </table>
+  </body>
+</html>

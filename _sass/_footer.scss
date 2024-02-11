@@ -1,0 +1,34 @@
+.footer {
+    background-color: $header-colour;
+    width: $footer-width;
+    height: $footer-height;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $footer-font-size;
+}
+
+.footer-content {
+    margin: auto 12px auto 12px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: $accent-colour;
+    transition: text-decoration 0.3s ease; /* Add a smooth transition for the underline */
+}
+
+.footer-link:hover span {
+    text-decoration: underline;
+    color: $accent-colour;
+}
+
+.footer-link i {
+    margin: 0;
+}
+
+.footer-icon {
+    font-size: $footer-font-size;
+    width: $footer-font-size;
+}

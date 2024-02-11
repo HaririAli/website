@@ -1,0 +1,45 @@
+---
+layout: page
+title: Publications
+permalink: /publications/
+---
+
+{% for publication in site.data.publications %}
+
+<div class="publication-item">
+    <h3>{{ publication.title }}</h3>
+    <p>
+        <i class="fa-solid fa-calendar-day publication-icon highlighted"></i>
+        <b class="highlighted">Publication date:</b> {{ publication.date }}
+    </p>
+    <p> <i class="fa-solid fa-pen publication-icon highlighted"></i> <b class="highlighted">Authors:</b>
+        {% for author in publication.authors %}
+            {% if author.type == "author" and forloop.last %}
+                and <b>{{ author.name }}</b>
+            {% elsif author.type == "author" %}
+                <b>{{ author.name }}</b>,
+            {% elsif forloop.last %}
+                and {{ author.name }}
+            {% else %}
+                {{ author.name }},
+            {% endif %}
+        {% endfor %}
+    </p>
+    <p>
+        <i class="fa-solid fa-book publication-icon highlighted"></i>
+        <b class="highlighted">Published in</b> {{ publication.venue }}
+    </p>
+    <h4>Abstract</h4>
+    <p>{{ publication.abstract }}</p>
+        <a href="/files/publications/{{publication.file}}" class="publication-link">
+            <i class="fa-solid fa-file-pdf publication-icon"></i>
+            <span>Proceedings</span>
+        </a>
+        <!--a href="/files/publications/" class="publication-link">
+            <i class="fa-solid fa-quote-right publication-icon"></i>
+            <span>Cite</span>
+        </a-->
+    <hr>
+</div>
+
+{% endfor %}

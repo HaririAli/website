@@ -1,0 +1,27 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+---
+
+{% for post in site.posts %}
+
+<div class="post-item">
+    <a href="{{ post.permalink }}">
+        <h3>{{ post.title }}</h3>
+    </a>
+    <div class="post-date">
+        <i class="fa-solid fa-calendar-day"></i>
+        <b>Published on {{ post.date | date: "%B %-d, %Y" }}</b>
+    </div>
+    <div class="post-time">
+        <i class="fa-solid fa-clock"></i>
+        <span>{{ post.read-time }} read</span>
+    </div>
+    <div class="post-excerpt">
+        {{ post.excerpt }}... <a href="{{ post.permalink }}">more</a>
+    </div>
+</div>
+<hr>
+
+{% endfor %}

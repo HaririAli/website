@@ -1,0 +1,174 @@
+- title: Selective Forwarding Attack on IoT Home Security Kits
+  venue: the 2nd International Workshop on Attacks and Defenses for Internet-of-Things (ADIoT) @ ESORICS 2019
+  date: September 26, 2019
+  authors:
+      - name: Ali Hariri
+        type: author
+      - name: Nicolas Giannelos
+        type: coauthor
+      - name: Budi Arief
+        type: coauthor
+  file: heartbeat-attack.pdf
+  abstract: >-
+    Efforts have been made to improve the security of the Internet of Things (IoT) devices, but there remain some
+    vulnerabilities and misimplementations. This paper describes a new threat to home security devices in which an
+    attacker can disable all functionality of a device, but to the device’s owner, everything still appears to be
+    operational. We targeted home security devices because their security is critical as people may rely on them to
+    protect their homes. In particular, we exploited a feature called “heartbeat”, which is exchanged between the
+    devices and the cloud in order to check that the devices are still connected. Even though network traffic was
+    encrypted, we successfully identified the heartbeats due to their fixed size and periodic nature. Thereafter, we
+    established a man-in-the-middle attack between the device and the cloud and selectively forwarded heartbeats while
+    filtering out other traffic. As a result, the device appears to be still connected (because the heartbeat traffic is
+    being allowed through), while in reality the device’s functionality is disabled (because non-heartbeat traffic is
+    being filtered out). We applied this exploit on a set of six devices, and five were found to be vulnerable.
+    Consequently, an intruder can use this exploit to disable a home security device and break into a house without
+    the awareness of the owner. We carried out a responsible disclosure exercise with the manufacturers of the affected
+    devices, but the response has been limited. This shows that IoT security is still not taken completely seriously
+    and many threats are still undiscovered. Finally, we provide some recommendations on how to detect and prevent the
+    threats posed by insecure IoT devices, which ironically include IoT home security kits.
+
+- title: "WiP: Metamodel for Continuous Authorisation and Usage Control"
+  venue: the 27th ACM on Symposium on Access Control Models and Technologies (SACMAT)
+  date: June 7, 2022
+  authors:
+      - name: Ali Hariri
+        type: author
+      - name: Amjad Ibrahim
+        type: coauthor
+      - name: Theo Dimitrakos
+        type: coauthor
+      - name: Bruno Crispo
+        type: coauthor
+  file: metamodel.pdf
+  abstract: >-
+    Access control has been traditionally used to protect data and privacy. Traditional access control models
+    (e.g., ABAC, RBAC) cannot meet modern security requirements as technologies spread over heterogeneous and dynamic
+    environments that need continuous monitoring. Modern models such as Usage Control (UCON) introduced the concept of
+    continuous authorisation that has a lifecycle consisting of a series of phases through which the authorisation
+    passes during its lifetime. However, such models assume a fixed lifecycle for all authorisations, so they cannot
+    satisfy emerging technologies (e.g., smart vehicles, zero-trust, data flow), which require various and fine-grained
+    lifecycles. Researchers have extended existing models to meet such requirements, but all solutions remain
+    restrictive, as they are specially tailored for specific use-cases. In this paper, we propose an extensible model
+    for continuous authorisations and usage control. The model enables its users to customise and dynamically configure
+    the authorisation lifecycle as required by the use-case. This adds a layer of abstraction, forming a metamodel that
+    can be instantiated into different flavours of continuous authorisation models, each addressing specific
+    requirements. We also show that the authorisation lifecycle can be modelled as Deterministic Finite Automaton (DFA)
+    and expressed in a structured language used by an evaluation engine to dynamically enact and manage the lifecycle.
+    We layout the building blocks of the proposed metamodel and devise future research directions.
+
+- title: "SIUV: A Smart Car Identity Management and Usage Control System Based on Verifiable Credentials"
+  venue: IFIP International Conference on ICT Systems Security and Privacy Protection
+  date: June 22, 2021
+  authors:
+      - name: Ali Hariri
+        type: author
+      - name: Subhajit Bandopadhyay
+        type: coauthor
+      - name: Athanasios Rizos
+        type: coauthor
+      - name: Theo Dimitrakos
+        type: coauthor
+      - name: Bruno Crispo
+        type: coauthor
+      - name: Muttukrishnan Rajarajan
+        type: coauthor
+  file: siuv.pdf
+  abstract: >-
+    The automotive industry is witnessing an accelerated growth in digital innovations that turn modern vehicles into
+    digital systems. This makes the security of modern vehicles a crucial concern as they have evolved into
+    cyber-physical and safety-critical systems. Therefore, stateful identity management and continuous access control
+    have become a paramount requirement in smart vehicles. Indeed, several Identity and Access Management (IAM)
+    frameworks have been proposed in the automotive field, but context awareness and continuity of control remain
+    overlooked. To address these challenges, we present SIUV: a stateful smart-car IAM that is based on Usage Control
+    (UCON) and Verifiable Credentials (VCs). SIUV uses Attribute Based Access Control (ABAC) policies to issue
+    privileges to subjects (i.e. drivers or applications) according to their credentials and claims. The issued
+    privileges are then used to decide whether to grant or deny access to in-car resources. Furthermore, the system
+    continuously monitors subject claims, resource attributes and environmental conditions (e.g. location or time).
+    Hence, if a change occurs, the system re-evaluates policies and updates or revokes issued privileges and usage
+    decisions accordingly. We describe the architecture of SIUV, discuss the evaluation results, and define future
+    directions.
+
+- title: "UCON+: Comprehensive Model, Architecture and Implementation for Usage Control and Continuous Authorization"
+  venue: Collaborative Approaches for Cyber Security in Cyber-Physical Systems (Book)
+  date: January 2, 2023
+  authors:
+    - name: Ali Hariri
+      type: author
+    - name: Amjad Ibrahim
+      type: coauthor
+    - name: Bithin Alangot
+      type: coauthor
+    - name: Subhajit Bandopadhyay
+      type: coauthor
+    - name: Antonio La Marra
+      type: coauthor
+    - name: Alessandro Rosetti
+      type: coauthor
+    - name: Hussein Joumaa
+      type: coauthor
+    - name: Theo Dimitrakos
+      type: coauthor
+  file: ucon+.pdf
+  abstract: >-
+    In highly dynamic and distributed computing environments (e.g., Cloud, Internet of Things (IoT), mobile, edge),
+    robust access and usage control of assets is crucial. Since assets can be replicated in various locations on
+    heterogeneous platforms and dynamic networks with unknown or partially authenticated users, the need for a uniform
+    control mechanism is essential. The theory of Usage Control (UCON) is an example of such a mechanism to regulate
+    access and usage of resources based on expressive polices and a loosely-coupled enforcement technology. However,
+    in complex socio-technical systems, concerns about scalability, performance, modularity often arise, and existing
+    UCON models and frameworks cannot meet such requirements. To tackle these concerns, we introduce UCON+, an
+    improvement over existing UCON models, which adds continuous monitoring before granting and after revoking
+    authorizations as well as policy administration and delegation. This chapter aggregates our recent contributions
+    on the conceptual, architectural, and implementation level of UCON+, and provides a comprehensive reference to
+    describe the current state-of-the-art and the novelties of UCON+.
+
+- title: "DataPAL Data Protection and Authorization Lifecycle framework"
+  venue: 6th South-East Europe Design Automation, Computer Engineering, Computer Networks and Social Media Conference (SEEDA-CECNSM)
+  date: September 23, 2021
+  authors:
+      - name: Subhajit Bandopadhyay
+        type: coauthor
+      - name: Theo Dimitrakos
+        type: coauthor
+      - name: Yair Diaz
+        type: coauthor
+      - name: Ali Hariri
+        type: author
+      - name: Tezcan Dilshener
+        type: coauthor
+      - name: Antonio La Marra
+        type: coauthor
+      - name: Alessandro Rosetti
+        type: coauthor
+  file: datapal.pdf
+  abstract: >-
+      This paper introduces a new model for handling data privacy throughout data lifecycle via the introduction of a
+      policy profile using the ALFA policy language. Our approach extends previous models in three complementary ways:
+      (1) By introducing Administration and Delegation Profile (ADP) in ALFA policy where users and companies can
+      restrict the scope of access/usage policies related to data as well as specify a chain of custody for data
+      (moreover such an approach eases up the tasks of handling users’ consent); (2) Thanks to our framework Usage
+      Control System Plus (UCS+) users can monitor the usage of data and revoke its usage upon specific conditions or
+      at will; (3) By introducing new states for policy evaluation, i.e. Admissible/NotAdmissible to filter out those
+      applicable policies that were unauthorized in the first place.
+
+- title: Aparecium Wi-Fi Planner Using Enhanced Indoor Propagation Model
+  venue: 2020 International Wireless Communications and Mobile Computing (IWCMC)
+  date: June 15, 2020
+  authors:
+      - name: Ali Ghandour
+        type: coauthor
+      - name: Jamal Haydar
+        type: coauthor
+      - name: Ali Hariri
+        type: author
+      - name: Jad Chahine
+        type: coauthor
+  file: aparecium.pdf
+  abstract: >-
+    Wi-Fi connectivity, a necessity in this digital era, requires careful infrastructure planning and tuning during
+    installation. In this paper, we propose “Aparecium Wi-Fi Planner”, an open-source and cross-platform, Wi-Fi planning
+    software tool based on an enhanced empirical path loss model. The proposed “Enhanced Solah's model” delivers more
+    accurate results than existing models. And hence, “Aparecium Wi-Fi Planner” accurately estimates path loss
+    attenuation, absorption attenuation by obstacles and fading effect. Moreover, the tool integrates the design and
+    development of several algorithms to find full-coverage and optimal access point location with reduced complexity.
+    Aparecium has been thoroughly tested and validated using both simulation and real testbed scenarios.

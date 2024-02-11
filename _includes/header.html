@@ -1,0 +1,53 @@
+<header>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" autocomplete="off"
+           onClick="JavaScript:toggleVisibility(this,'hidden-nav');">
+    <label for="menu-toggle" id="menu-button" class="menu-button">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </label>
+    <script language="JavaScript">
+            function toggleVisibility(eventsender, objectId){
+                var visibility = "hidden";
+                if (eventsender.checked === true){
+                    visibility = "visible";
+                }
+                document.getElementById(objectId).style.visibility = visibility;
+            }
+
+    </script>
+    <nav>
+        <ul class="hidden-nav" id="hidden-nav">
+            {% for nav in site.data.nav %}
+            {% if page.url contains nav.url and nav.url != site.baseurl %}
+            <li><a href="{{ nav.url }}" class="active">{{ nav.title }}</a></li>
+            {% elsif page.url == nav.url %}
+            <li><a href="{{ nav.url }}" class="active">{{ nav.title }}</a></li>
+            {% else %}
+            <li><a href="{{ nav.url }}">{{ nav.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+
+        <ul class="visible-nav">
+            {% for nav in site.data.nav %}
+            {% if page.url contains nav.url and nav.url != site.baseurl %}
+            <li><a href="{{ nav.url }}" class="active">{{ nav.title }}</a></li>
+            {% elsif page.url == nav.url %}
+            <li><a href="{{ nav.url }}" class="active">{{ nav.title }}</a></li>
+            {% else %}
+            <li><a href="{{ nav.url }}">{{ nav.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+
+    </nav>
+    <div class="author">
+        <div id="avatar">
+            <img src="/images/{{ site.data.author.avatar }}"/>
+        </div>
+        <div class="name">
+            <b>{{ site.data.author.name }}</b>
+        </div>
+    </div>
+</header>

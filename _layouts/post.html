@@ -1,0 +1,20 @@
+---
+layout: main
+---
+
+<div class="post-header">
+    <div class="post-date">
+        <i class="fa-solid fa-calendar-day"></i>
+        <b>Published on {{ page.date | date: "%B %-d, %Y" }} by {{ page.author }}</b>
+    </div>
+    <div class="post-time">
+        <i class="fa-solid fa-clock"></i> {{ page.read-time }} read
+    </div>
+</div>
+
+<hr>
+
+<div class="post-content">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+</div>

@@ -1,0 +1,99 @@
+// variable names may prefixed with 'l', 'm' and 's' refer to screen sizes of large, medium and small respectively.
+// variables that don't have this prefix apply to more than one size.
+
+/** Colours **/
+// Dark mode (default)
+$background-colour: #121212;
+$header-colour:     #1D1D1D;
+$font-colour:       #FFFFFF;
+$accent-colour:     #8CBA86;
+
+// Light mode
+$light-background-colour: #FFFFFF;
+$light-header-colour:     #D9D9D9;
+$light-font-colour:       #000000;
+$light-accent-colour:     #5E9D68;
+
+
+/** Media queries **/
+$large-screen: 1240px;
+$small-screen: 800px;
+
+
+/** Dimensions **/
+// General
+$l-page-margin: 11%;
+$m-page-margin: 56px;
+$s-page-margin: 16px;
+
+$l-hr-width: 256px;
+$m-hr-width: 192px;
+$s-hr-width: 128px;
+$hr-height: 3px;
+
+// Header
+$l-avatar-size: 192px;
+$m-avatar-size: 160px;
+$s-avatar-size: 128px;
+
+$l-avatar-image-size: 176px; // $l-avatar-size - 16px
+$m-avatar-image-size: 144px; // $m-avatar-size - 16px
+$s-avatar-image-size: 112px; // $s-avatar-size - 16px
+
+$l-avatar-border-width: 208px; // $l-avatar-size + 16px
+$m-avatar-border-width: 176px; // $m-avatar-size + 16px
+$s-avatar-border-width: 144px; // $s-avatar-size + 16px
+
+$l-avatar-border-height: 100px; // $l-avatar-size / 2 - 4px
+$m-avatar-border-height: 84px; // $m-avatar-size / 2 - 4px
+$s-avatar-border-height: 68px; // $s-avatar-size / 2 - 4px
+
+$l-author-position: -96px; // -($l-avatar-size / 2)
+$m-author-position: -80px; // -($m-avatar-size / 2)
+$s-author-position: -64px; // -($s-avatar-size / 2)
+
+$l-header-height: 104px; // $l-avatar-size / 2 + 8px
+$m-header-height: 88px; // $m-avatar-size / 2 + 8px
+$s-header-height: 72px; // $s-avatar-size / 2 + 8px
+
+$header-width: 100%;
+$header-shadow: 2px 2px 8px 0px rgba(0,0,0,0.6);
+
+// Footer
+$footer-width: 100%;
+$footer-height: 64px;
+
+// Sidebars
+$l-left-sidebar-width: 176px; // same as avatar size
+$left-sidebar-width: fit-content;
+$right-sidebar-width: fit-content;
+$sidebar-height: fit-content;
+
+// Blog
+$post-excerpt-height: 3em;
+$post-excerpt-line: 1.5;
+
+
+/** Fonts **/
+// General
+$font-size: 12pt;
+$font: 'Inter', sans-serif;
+
+// Header
+$nav-font-size: 12pt;
+
+// Footer
+$footer-font-size: 9pt;
+
+// Publications
+$publication-item-font-size: 11pt;
+$publication-link-font-size: 10pt;
+$publication-icon-size: 12pt;
+
+// Sidebars
+$bio-font-size: 10pt;
+$social-links-font-size: 10pt;
+$social-icons-font-size: 12pt;
+
+// Blog
+$post-date-font-size: 10pt;

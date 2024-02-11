@@ -1,0 +1,228 @@
+header {
+    width: $header-width;
+    height: $s-header-height;
+    @media screen and (min-width: $small-screen) and (max-width: $large-screen) {
+        height: $m-header-height;
+    }
+    @media screen and (min-width: $large-screen) {
+        height: $l-header-height;
+    }
+    background-color: $header-colour;
+    float: top;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $header-shadow;
+    position: relative;
+}
+
+nav {
+    text-align: center;
+    margin-top: 16px;
+    height: 0;
+    transition: height 0.3s;
+}
+
+nav a {
+    color: $font-colour;
+    text-decoration: none;
+    font-size: $nav-font-size;
+}
+
+nav a:hover {
+    color: $accent-colour;
+}
+
+nav .active {
+    color: $accent-colour;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: block;
+    @media screen and (min-width: $small-screen) {
+        display: none;
+    }
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+}
+
+.bar {
+    background: $accent-colour;
+    height: 3px;
+    width: 25px;
+    margin: 4px auto;
+    transition: 0.4s;
+}
+
+#menu-toggle:checked + label .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + label .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+#menu-toggle:checked + label .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.visible-nav {
+    display: none;
+    @media screen and (min-width: $small-screen) {
+        display: block;
+    }
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.visible-nav li {
+    display: inline;
+    margin: 0 4px 0 4px;
+}
+
+.hidden-nav {
+    visibility: hidden;
+    @media screen and (min-width: $small-screen) {
+        display: none;
+    }
+    list-style-type: none;
+    position: absolute;
+    top: 25px;
+    right: 16px;
+    margin-top: 32px;
+    padding: 8px;
+    background: $header-colour;
+    box-shadow: 0 0 8px rgba(0,0,0,0.25);
+    border: 0.2px solid $accent-colour;
+}
+
+.hidden-nav:before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    right: 8px;
+    width: 0;
+    display: block;
+    z-index: 0;
+}
+
+.hidden-nav:after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 4px;
+    width: 0;
+    border-style: solid;
+    border-width: 0 8px 8px;
+    border-color: $accent-colour transparent;
+    display: block;
+    z-index: 1;
+}
+
+.hidden-nav li {
+    padding: 4px 0 4px 0;
+}
+
+.author {
+    pointer-events: none;
+    position: absolute;
+    margin-left: $s-page-margin;
+    bottom: $s-author-position;
+    @media screen and (min-width: $small-screen) and (max-width: $large-screen) {
+        margin-left: $m-page-margin;
+        bottom: $m-author-position;
+    }
+    @media screen and (min-width: $large-screen) {
+        margin-left: $l-page-margin;
+        bottom: $l-author-position;
+    }
+    display: flex;
+    overflow: visible;
+    align-items: center;
+}
+
+.name{
+    color: $accent-colour;
+    font-size: 16pt;
+    margin-bottom: 48px;
+    margin-left: 8px;
+    @media screen and (min-width: $small-screen) and (max-width: $large-screen) {
+        margin-left: 16px;
+    }
+    @media screen and (min-width: $large-screen) {
+        margin-left: 32px;
+    }
+}
+
+#avatar {
+    position: relative;
+    height: $s-avatar-size;
+    width: $s-avatar-size;
+    @media screen and (min-width: $small-screen) and (max-width: $large-screen) {
+        height: $m-avatar-size;
+        width: $m-avatar-size;
+    }
+    @media screen and (min-width: $large-screen) {
+        height: $l-avatar-size;
+        width: $l-avatar-size;
+    }
+    border-radius: 100%;
+    box-shadow: $header-shadow;
+    background-color: $header-colour;
+    margin: 16 auto;
+}
+
+#avatar:before{
+    position: absolute;
+    background: $header-colour;
+    width: $s-avatar-border-width;
+    height: $s-avatar-border-height;
+    margin: -4px 0 0 -8px;
+    @media screen and (min-width: $small-screen) and (max-width: $large-screen) {
+        width: $m-avatar-border-width;
+        height: $m-avatar-border-height;
+    }
+    @media screen and (min-width: $large-screen) {
+        width: $l-avatar-border-width;
+        height: $l-avatar-border-height;
+    }
+    content: "";
+}
+
+#avatar:after{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#avatar img{
+    pointer-events: auto;
+    position: relative;
+    margin: 8px;
+    width: $s-avatar-image-size;
+    height: $s-avatar-image-size;
+    max-width: $s-avatar-image-size;
+    max-height: $s-avatar-image-size;
+    @media screen and (min-width: $small-screen) and (max-width: $large-screen) {
+        width: $m-avatar-image-size;
+        height: $m-avatar-image-size;
+        max-width: $m-avatar-image-size;
+        max-height: $m-avatar-image-size;
+    }
+    @media screen and (min-width: $large-screen) {
+        width: $l-avatar-image-size;
+        height: $l-avatar-image-size;
+        max-width: $l-avatar-image-size;
+        max-height: $l-avatar-image-size;
+    }
+    border-radius: 50%;
+}

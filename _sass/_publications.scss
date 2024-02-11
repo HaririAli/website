@@ -1,0 +1,45 @@
+.publication-item {
+    margin-top: 32px;
+}
+
+.publication-item a {
+    color: $accent-colour;
+    text-decoration: none;
+}
+
+.publication-item a:hover {
+    text-decoration: underline;
+}
+
+.publication-item p {
+    font-size: $publication-item-font-size;
+    margin-top: -8px;
+}
+
+.publication-item h3, h4 {
+    color: $accent-colour;
+}
+
+.publication-item .highlighted {
+    color: $accent-colour;
+    text-decoration: bold;
+}
+
+.publication-link {
+    font-size: $publication-link-font-size;
+    display:inline-block;
+    text-decoration: none;
+    color: inherit;
+    margin: 0 16px 8px 0;
+    transition: text-decoration 0.3s ease; /* Add a smooth transition for the underline */
+}
+
+.publication-link:hover span {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.publication-icon {
+    font-size: $publication-icon-size;
+    width: $publication-icon-size;
+}
